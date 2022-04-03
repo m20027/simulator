@@ -1,0 +1,66 @@
+本ソフトウェアは防衛装備庁航空装備研究所が作成したものであり、
+無許諾での使用・改変及び再配布を禁止します。
+また、防衛装備庁航空装備研究所は本ソフトウェアに関していかなる保証も行わず、
+使用者による本ソフトウェアの使用・改変及び再配布に伴って生じたいかなる損害に対しても
+責任を負わないものとします。
+
+Copyright (c) 2021 Air Systems Research Center, Acquisition, Technology & Logistics Agency(ATLA)
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are forbidden unless ATLA gives a permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==========================================================================================
+また、本ソフトウェアは以下のオープンソースソフトウェアを改変して使用しており、
+当該改変部分のソースコードを同梱しています。
+
+
+1. pybind11_json
+Code in thirdParty/include/pybind11_json is adapted from
+https://github.com/pybind/pybind11_json (3-Clause BSD License)
+
+The original license file is put in thirdParty/include/pybind11_json/LICENSE
+and the changes from the original code are described in the source file.
+
+2. ray
+Code in addon/rayUtility/extension/agents is adapted from
+https://github.com/ray-project/ray (Apache License 2.0)
+
+The original license file is put in addon/rayUtility/extension/LICENSE
+and the changes from the original code are described in the source file.
+
+==========================================================================================
+また、本ソフトウェアは以下のオープンソースソフトウェアを改変せずに使用しています。
+本ソフトウェアの使用者はこれらのオープンソースソフトウェアについて各々のライセンスに従い、
+必要に応じダウンロード・インストールの上、本ソフトウェアを使用してください。
+
+This software uses the open-source softwares listed below without modification.
+They are not redistributed with this software and users of this software need to install them by themselves.
+
+<C++ Softwares>
+1. Boost
+2. Eigen (MPL 2.0 part only)
+3. pybind11
+4. NLopt (dynamic link)
+5. nlohmann's json
+6. Magic Enum
+
+<Python Softwares>
+1. Numpy
+2. OpenAI gym
+3. pygame
+4. PyOpenGL
+5. opencv-python
+6. Tensorflow
+7. PyTorch
