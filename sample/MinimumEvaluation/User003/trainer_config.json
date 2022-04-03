@@ -1,0 +1,10 @@
+{
+	"model":{
+        "fcnet_hiddens": [64, 64],
+		"vf_share_layers":true,
+        "use_lstm":true,
+        "lstm_cell_size": 256
+	},
+	"framework":"torch"
+}
+	
