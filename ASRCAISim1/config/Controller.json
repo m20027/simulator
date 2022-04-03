@@ -1,0 +1,41 @@
+{"Factory":{
+	"Controller":{
+		"PropNav":{
+			"class":"PropNav",
+			"config":{
+				"G":15
+			}
+		},
+		"MassPointFighter::FlightController":{
+			"class":"MassPointFighter::FlightController",
+			"config":{
+			}
+		},
+		"CoordinatedFighter::FlightController":{
+			"class":"CoordinatedFighter::FlightController",
+			"config":{
+				"lambdaVel":1.0,
+				"lambdaTheta":1.0,
+				"clampTheta":45.0,
+				"kVel":10.0,
+				"kAccel":10.0,
+				"kPower":20.0,
+				"kTheta":10000.0,
+				"kOmega":10000.0,
+				"kAoa":10000.0,
+				"kEps":0.1,
+				"pitchLimit":0,
+				"pitchLimitThreshold":0
+			}
+		},
+		"Fighter::HumanIntervention":{
+			"class":"Fighter::HumanIntervention",
+			"config":{
+				"capacity":1,
+				"delay":3.0,
+				"cooldown":0.999
+			}
+		}
+	}
+}
+}

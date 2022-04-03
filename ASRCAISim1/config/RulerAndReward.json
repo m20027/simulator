@@ -1,0 +1,75 @@
+{"Factory":{
+	"Ruler":{
+		"R3BVRRuler01":{
+			"class":"R3BVRRuler01",
+			"config":{
+				"maxTime":1200,
+				"dLine":100000,
+				"dOut":75000,
+				"hLim":20000,
+				"westSider":"Red",
+				"eastSider":"Blue",
+				"pDisq": -100,
+				"pBreak": 10,
+				"pDown": 5,
+				"pAdv": 0.1,
+				"pOut": 0.1
+			}
+		}
+	},
+	"Reward":{
+		"ScoreReward":{
+			"class":"ScoreReward",
+			"config":{}
+		},
+		"R3BVRBasicReward01-1":{
+			"class":"R3BVRBasicReward01",
+			"config":{
+				"rElim":0.0,
+				"rElimE":0.0,
+				"rBreakRatio":0.0,
+				"rBreak":0.0,
+				"rBreakE":0.0,
+				"adjustBreakEnd":true,
+				"rTimeup":0.0,
+				"rDisq":0.0,
+				"rDisqE":0.0,
+				"rHitRatio":0.0,
+				"rHit":0.0,
+				"rHitE":0.0,
+				"rAdvRatio":0.0,
+				"acceptNegativeAdv":false,
+				"rCrashRatio":0.0,
+				"rCrash":0.0,
+				"rCrashE":0.0,
+				"rOutRatio":0.0,
+				"adjustZerosum":true
+			}
+		},
+		"R3BVRBasicReward01-2":{
+			"class":"R3BVRBasicReward01",
+			"config":{
+				"rElim":20.0,
+				"rElimE":-20.0,
+				"rBreakRatio":0.0,
+				"rBreak":40.0,
+				"rBreakE":-40.0,
+				"adjustBreakEnd":true,
+				"rTimeup":0.0,
+				"rDisq":-300.0,
+				"rDisqE":0.0,
+				"rHitRatio":0.0,
+				"rHit":20.0,
+				"rHitE":-20.0,
+				"rAdvRatio":0.0,
+				"acceptNegativeAdv":false,
+				"rCrashRatio":0.0,
+				"rCrash":-200.0,
+				"rCrashE":0.0,
+				"rOutRatio":10.0,
+				"adjustZerosum":false
+			}
+		}
+	}
+	}
+}
