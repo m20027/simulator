@@ -1,0 +1,18 @@
+include builder.sh
+include builder.bat
+include builder_MSYS.bat
+include CMakeLists.txt
+include MANIFEST.in.fragment
+include license.txt
+include requirements.txt
+include version.txt
+recursive-include ASRCAISim1 *Core.*
+recursive-include ASRCAISim1/include/ASRCAISim1 *.h
+recursive-include ASRCAISim1/include/thirdParty *
+recursive-include ASRCAISim1/config *.json
+include ASRCAISim1/rangeTable.npz
+recursive-include include *.h
+recursive-include src *.cpp
+recursive-include thirdParty/include/pybind11_json *
+prune ASRCAISim1/addons
+include ASRCAISim1/addons/__init__.py
