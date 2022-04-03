@@ -1,0 +1,43 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C SOURCE FILE Test HAVE_THREAD_LOCAL_STORAGE failed with the following output:
+Change Dir: /Volumes/Sub/simulator/nlopt-2.6.2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_90fed/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_90fed.dir/build.make CMakeFiles/cmTC_90fed.dir/build
+Building C object CMakeFiles/cmTC_90fed.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -DHAVE_THREAD_LOCAL_STORAGE  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -MD -MT CMakeFiles/cmTC_90fed.dir/src.c.o -MF CMakeFiles/cmTC_90fed.dir/src.c.o.d -o CMakeFiles/cmTC_90fed.dir/src.c.o -c /Volumes/Sub/simulator/nlopt-2.6.2/CMakeFiles/CMakeTmp/src.c
+/Volumes/Sub/simulator/nlopt-2.6.2/CMakeFiles/CMakeTmp/src.c:2:5: error: '__declspec' attributes are not enabled; use '-fdeclspec' or '-fms-extensions' to enable support for __declspec attributes
+    __declspec(thread) int tls;
+    ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_90fed.dir/src.c.o] Error 1
+make: *** [cmTC_90fed/fast] Error 2
+
+
+Source file was:
+
+    __declspec(thread) int tls;
+
+    int main(void) {
+        return 0;
+    }
