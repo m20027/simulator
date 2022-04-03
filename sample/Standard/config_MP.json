@@ -1,0 +1,54 @@
+{"Factory":{
+	"Ruler":{
+		"R3BVRRuler01_MP":{
+			"class":"R3BVRRuler01",
+			"config":{
+				"maxTime":1200,
+				"dLine":100000,
+				"dOut":75000,
+				"hLim":20000,
+				"westSider":"Red",
+				"eastSider":"Blue",
+				"pDisq": -100,
+				"pElim": 10,
+				"pBreak": 10,
+				"pDown": 5,
+				"pAdv": 0.1,
+				"pOut": 0.1
+			}
+		}
+	},
+	"PhysicalAsset":{
+		"R3Fighter_MP":{
+			"class":"MassPointFighter",
+			"config":{
+				"pilot":{
+					"model":"Fighter::HumanIntervention"
+				},
+				"sensor":{
+					"radar":"R3AircraftRadar00",
+					"mws":"R3MWS00"
+				},
+				"weapon":{
+					"missile":"R3Missile00",
+					"numMsls":10
+				},
+				"stealth":{
+					"rcsScale":1.0
+				},
+				"dynamics":{
+					"controller":"MassPointFighter::FlightController",
+					"rollMax": 15.0,
+					"pitchMax":15.0,
+					"yawMax":15.0,
+					"vMax": 300,
+					"vMin": 150
+				},
+				"propulsion":{
+					"aMax": 9.80665,
+					"aMin": -9.80665
+				}
+			}
+		}
+	}
+}}

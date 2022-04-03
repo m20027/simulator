@@ -1,0 +1,12 @@
+{
+    "seed":12345,
+    "env_config":[
+        "../config/BVR2v2_rand.json",
+        "../config/ForExpertTraj2v2_Cent.json",
+        {"Manager":{"ViewerType":"None"}}
+    ],
+    "num_workers":16,
+    "num_episodes_per_worker":100,
+    "save_dir":"./experts/2vs2_Cent/"
+}
+	

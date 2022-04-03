@@ -1,0 +1,51 @@
+{
+    "seed":12345,
+    "train_steps":50000,
+    "checkpoint_interval":100,
+    "save_dir":"./results",
+    "experiment_name":"Imitate2v2",
+    "restore":null,
+    "trainer_common_config":{
+        "env_config":{
+            "config":[
+                "../config/BVR2v2_rand.json",
+                "../config/ForLearning2v2.json",
+                {"Manager":{"ViewerType":"None"}}
+            ],
+            "target":"Blue"
+        },
+        "input":"./experts/2vs2/Traj*/*.json",
+        "input_evaluation":[],
+        "model":{
+            "fcnet_hiddens": [64, 64],
+            "vf_share_layers":true,
+            "use_lstm":true,
+            "lstm_cell_size": 256,
+            "max_seq_len":128
+        },
+        "batch_mode":"complete_episodes",
+        "beta":0.0,
+        "replay_buffer_size": 12800,
+        "replay_burn_in":32,
+        "replay_zero_init_states":true,
+        "train_batch_size":1600,
+        "num_gpus":1,
+        "lr":1e-4,
+        "num_workers":16,
+        "framework":"torch"
+    },
+    "trainers":{
+        "Learner":{
+            "trainer_type":"RNNMARWIL",
+            "config_overrider":null,
+            "policies_to_train":["Learner"]
+        }
+    },
+    "policies":{
+        "Learner":{
+            "initial_weight":null,
+            "save_path_at_the_end":"./policies/Imitated2v2.dat"
+        }
+    }
+}
+	

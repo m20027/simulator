@@ -1,0 +1,2 @@
+include sample/config/MANIFEST.in.fragment
+recursive-include sample/config *.json

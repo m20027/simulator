@@ -1,0 +1,11 @@
+include sample/OriginalModelSample/MANIFEST.in.fragment
+include sample/OriginalModelSample/setup.py
+include sample/OriginalModelSample/builder.sh
+include sample/OriginalModelSample/builder.bat
+include sample/OriginalModelSample/builder_MSYS.bat
+include sample/OriginalModelSample/CMakeLists.txt
+include sample/OriginalModelSample/MANIFEST.in.self
+recursive-include sample/OriginalModelSample/OriginalModelSample *
+recursive-include sample/OriginalModelSample/include *
+recursive-include sample/OriginalModelSample/src *
+recursive-exclude sample/OriginalModelSample/OriginalModelSample *.pyc

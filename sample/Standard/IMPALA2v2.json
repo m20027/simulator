@@ -1,0 +1,65 @@
+{
+    "seed":12345,
+    "train_steps":10000,
+    "refresh_interval":1000,
+    "checkpoint_interval":100,
+    "save_dir":"./results",
+    "experiment_name":"IMPALA2v2",
+    "restore":null,
+    "trainer_common_config":{
+        "env_config":{
+            "config":[
+                "../config/BVR2v2_rand.json",
+                "../config/ForLearning2v2.json",
+                {
+                    "Manager":{
+                        "ViewerType":"None",
+                        "Loggers":{
+                            "RayMultiEpisodeLogger":{
+                                "class":"RayMultiEpisodeLogger",
+                                "config":{
+                                    "prefix":"./results/IMPALA2v2",
+                                    "episodeInterval":1,
+                                    "ratingDenominator":100
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+		"model":{
+            "fcnet_hiddens": [64, 64],
+            "vf_share_layers":true,
+            "use_lstm":true,
+            "lstm_cell_size": 256,
+            "max_seq_len":128
+		},
+		"rollout_fragment_length":300,
+		"replay_proportion":3.0,
+		"replay_buffer_num_slots":100,
+		"batch_mode":"truncate_episodes",
+		"train_batch_size":1200,
+		"num_gpus":1,
+		"lr":1e-4,
+		"num_workers":16,
+		"num_envs_per_worker":1,
+		"framework":"torch"
+    },
+    "trainers":{
+        "Learner":{
+            "trainer_type":"IMPALA",
+            "config_overrider":null,
+            "policies_to_train":["Learner"]
+        }
+    },
+    "policies":{
+        "Learner":{
+            "initial_weight":"./policies/Imitated2v2.dat"
+        },
+        "Initial":{
+            "initial_weight":null
+        }
+    }
+}
+	
