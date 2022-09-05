@@ -1,0 +1,15 @@
+{
+	"blue": {
+		"userID": "User003",
+		"server": "172.17.0.2",
+		"agentPort": 51000,
+		"policyPort": 51001
+	},
+	"red": {
+		"userID": "RuleBased",
+		"server": "172.17.0.3",
+		"agentPort": 51000,
+		"policyPort": 51001
+	},
+	"seed": null
+}

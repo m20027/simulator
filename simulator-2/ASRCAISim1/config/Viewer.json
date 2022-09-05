@@ -1,0 +1,10 @@
+{"Factory":{"Viewer":{
+	"None":{
+		"class":"Viewer",
+		"config":{}
+	},
+	"God":{
+		"class":"GodView",
+		"config":{}
+	}
+}}}

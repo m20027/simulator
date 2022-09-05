@@ -1,0 +1,44 @@
+{
+	"Manager":{
+		"Rewards":[
+			{"model":"R3BVRBasicReward01-1","target":"All"},
+			{"model":"R3BVRBasicReward01-2","target":"All"},
+			{"model":"R3RewardSample01","target":"All"}
+		],
+		"AgentConfigDispatcher":{
+			"Initial_e":{"type":"Internal","model":"R3Initial"},
+			"Learner_e":{"type":"External","model":"R3AgentSample01(2vs2)_single","policy":"Learner"},
+			"Learner":{"type":"group","order":"fixed",
+				"elements":[
+					{"type":"alias","alias":"Learner_e"},
+					{"type":"alias","alias":"Learner_e"}
+				]
+			},
+			"Initial":{"type":"group","order":"fixed",
+				"elements":[
+					{"type":"alias","alias":"Initial_e"},
+					{"type":"alias","alias":"Initial_e"}
+				]
+			},
+			"BlueAgents":{
+				"type":"alias","alias":"Learner",
+				"overrider":[
+					{"type":"group","order":"fixed","elements":[
+						{"type":"direct","value":{"name":"Blue1"}},
+						{"type":"direct","value":{"name":"Blue2"}}
+					]}
+				]
+			},
+			"RedAgents":{
+				"type":"alias","alias":"Initial",
+				"overrider":[
+					{"type":"group","order":"fixed","elements":[
+						{"type":"direct","value":{"name":"Red1"}},
+						{"type":"direct","value":{"name":"Red2"}}
+					]}
+				]
+			}
+		}
+	}
+}
+	

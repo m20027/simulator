@@ -1,0 +1,3 @@
+include sample/Standard/MANIFEST.in.fragment
+recursive-include sample/Standard *.py
+recursive-include sample/Standard *.json

@@ -1,0 +1,8 @@
+include addons/rayUtility/MANIFEST.in.fragment
+include addons/rayUtility/builder.py
+include addons/rayUtility/requirements.txt
+recursive-include addons/rayUtility *.py
+recursive-include addons/rayUtility/extension *
+recursive-include addons/rayUtility/logger *
+recursive-exclude addons/rayUtility *.pyc
+recursive-include ASRCAISim1/addons/rayUtility *

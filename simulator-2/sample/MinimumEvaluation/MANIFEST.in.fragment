@@ -1,0 +1,5 @@
+include sample/MinimumEvaluation/MANIFEST.in.fragment
+recursive-include sample/MinimumEvaluation *.py
+recursive-include sample/MinimumEvaluation *.json
+recursive-include sample/MinimumEvaluation *.dat
+recursive-exclude sample/MinimumEvaluation *.pyc

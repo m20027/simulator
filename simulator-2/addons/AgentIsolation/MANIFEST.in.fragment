@@ -1,0 +1,11 @@
+include addons/AgentIsolation/MANIFEST.in.fragment
+include addons/AgentIsolation/builder.py
+include addons/AgentIsolation/builder.sh
+include addons/AgentIsolation/builder.bat
+include addons/AgentIsolation/builder_MSYS.bat
+include addons/AgentIsolation/CMakeLists.txt
+recursive-include addons/AgentIsolation/AgentIsolation *
+recursive-include addons/AgentIsolation/include *
+recursive-include addons/AgentIsolation/src *
+recursive-exclude addons/AgentIsolation/AgentIsolation *.pyc
+recursive-include ASRCAISim1/addons/AgentIsolation *
